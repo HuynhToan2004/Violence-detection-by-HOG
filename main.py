@@ -2,7 +2,7 @@ from data_preprocessing import load_data, process_video
 from train import train_and_evaluate
 
 def main():
-    X, y = load_data('/kaggle/input/real-life-violence-situations-dataset/Real Life Violence Dataset')
+    X, y = load_data('/real-life-violence-situations-dataset/Real Life Violence Dataset')
     
     a = [] 
     b = []  

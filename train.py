@@ -19,11 +19,8 @@ def train_and_evaluate(features, labels):
         n_jobs=-1
     )
 
-    # Start MLFlow tracking
     with mlflow.start_run():
         rf_model.fit(X_train, y_train)
-        
-        # Log model to MLFlow
         mlflow.sklearn.log_model(rf_model, "random_forest_model")
         
         y_pred = rf_model.predict(X_test)
